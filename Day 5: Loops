@@ -1,0 +1,17 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    n = int(input())
+    for i in range(1, 11) :
+        result = str(n * i)
+        i_new = str(i)
+        n_new = str(n)
+        print(n_new + " x " + i_new + " = " + result)
