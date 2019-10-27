@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(input())
+myArr = []
+for i in range(n) :
+    myArrEvenStr = ''
+    myArrOddStr = ''
+    myArrEven = []
+    myArrOdd = []
+    myArr.append(str(input()))
+    for j in range(len(myArr[i])) :
+        if j == 0 :
+            myArrEven.append(myArr[i][j])
+        elif j % 2 == 0 :
+            myArrEven.append(myArr[i][j])
+        elif j % 2 != 0 :
+            myArrOdd.append(myArr[i][j])
+    for k in myArrEven :
+        myArrEvenStr = myArrEvenStr + k
+    for k in myArrOdd :
+        myArrOddStr = myArrOddStr + k
+    print(myArrEvenStr, myArrOddStr)
