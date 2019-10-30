@@ -1,0 +1,16 @@
+n = int(input())
+dic = {}
+arr = []
+for i in range(n) :
+    a = list(map(str, input().split()))
+    dic[a[0]] = a[1]
+phonebook = dic
+while True :
+    try :
+        i = str(input())
+        if i in dic:
+            print(i,"=", dic[i], sep = "")
+        else :
+            print("Not found")
+    except :
+        break
