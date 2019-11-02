@@ -1,0 +1,24 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+if __name__ == '__main__':
+    n = int(input())
+    total = 0
+    arr = []
+    binary = str(format(n, "08b"))
+    for i in range(len(binary)) :
+        if binary[i] == '1' :
+            total += 1
+            j = i + 1
+            while j < len(binary) and binary[j] != '0':
+                total += 1
+                j += 1
+            arr.append(total)
+            total = 0
+    arr.sort()
+    maxA = max(arr)
+    print(maxA)
