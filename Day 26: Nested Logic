@@ -1,0 +1,16 @@
+a = list(map(int, str(input()).split()))
+b = list(map(int, str(input()).split()))
+a.reverse()
+b.reverse()
+if a[0] == b[0]:
+    if a[1] == b[1] or a[1] < b[1]:
+        if a[2] == b[2] or a[2] < b[2]:
+            print(0)
+        else :
+            print((15 * abs(a[2]-b[2])))
+    else :
+        print((500 * abs(a[1]-b[1])))
+elif a[0] < b[0]:
+    print(0)
+else :
+    print(10000)
